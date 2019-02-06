@@ -51,16 +51,16 @@ import java.util.Set;
 
 //        private static final String TOPIC = "Kafka_Example";
 
-        @GetMapping("/signup/{name}")
-        public String post(@PathVariable("name") final String name) {
-
-//            kafkaTemplate.send(TOPIC, new User(name, "Technology", "hoho@gmail.com", "123456789"));
-            kafkaTemplate.send("deepak", new User(name, "Technology", "hoho@gmail.com", "123456789"));
-//            kafkaTemplate.send(TOPIC, name);
-//            kafkaTemplate.send("deepak", name);
-
-            return "Published successfully";
-        }
+//        @GetMapping("/signup/{name}")
+//        public String post(@PathVariable("name") final String name) {
+//
+////            kafkaTemplate.send(TOPIC, new User(name, "Technology", "hoho@gmail.com", "123456789"));
+//            kafkaTemplate.send("deepak", new User(name, "Technology", "hoho@gmail.com", "123456789"));
+////            kafkaTemplate.send(TOPIC, name);
+////            kafkaTemplate.send("deepak", name);
+//
+//            return "Published successfully";
+//        }
 
         @PostMapping("/signin")
         public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginForm loginRequest) {
