@@ -92,7 +92,7 @@ import java.util.Set;
             User user = new User(signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(),
                     encoder.encode(signUpRequest.getPassword()));
 
-            kafkaTemplate.send("deepak",user);
+            kafkaTemplate.send("deepak_json",user);
             Set<String> strRoles = signUpRequest.getRole();
             Set<Role> roles = new HashSet<>();
 
